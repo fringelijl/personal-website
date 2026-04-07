@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>How I Help — Jean-Luc Fringeli</title>
+<meta name="description" content="The execution partner for hardware companies. I solve the hardest operational challenges in product development and Asia manufacturing."/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#1B2A4A;--navy-dark:#111e36;--navy-mid:#243058;
+  --gold:#B8963E;--gold-light:#d4af5a;--gold-pale:#f5ead8;
+  --white:#ffffff;--off-white:#f8f7f4;--gray:#e8e6e1;
+  --text-muted:#7a7570;--text-navy-muted:#8899bb;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:#3a3530;line-height:1.7;font-size:15px}
+.container{max-width:1080px;margin:0 auto;padding:0 5%}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(17,30,54,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(184,150,62,0.15)}
+.nav-inner{max-width:1080px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:60px;position:relative}
+.nav-logo{font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:var(--white);text-decoration:none}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{color:var(--text-navy-muted);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--white)!important;padding:7px 18px;border-radius:3px;font-weight:600!important}
+.nav-cta:hover{background:var(--gold-light)!important}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-hamburger span{width:20px;height:2px;background:var(--white);border-radius:2px}
+.mobile-menu{display:none;position:absolute;top:60px;left:0;right:0;background:var(--navy-dark);padding:16px 5%;border-bottom:1px solid rgba(184,150,62,0.15)}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;color:var(--text-navy-muted);text-decoration:none;font-size:14px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+.mobile-menu a:last-child{border:none;color:var(--gold);font-weight:600}
+
+/* SHARED COMPONENTS */
+.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.eyebrow-line{width:24px;height:1px;background:var(--gold)}
+.eyebrow span{font-size:10.5px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif}
+.section-title{font-size:36px;font-weight:800;color:var(--navy);line-height:1.15;letter-spacing:-0.3px}
+.btn-gold{background:var(--gold);color:var(--white);padding:12px 26px;border-radius:3px;text-decoration:none;font-weight:700;font-size:13.5px;display:inline-block;transition:background .2s}
+.btn-gold:hover{background:var(--gold-light)}
+.btn-ghost{border:1px solid rgba(255,255,255,0.25);color:var(--white);padding:12px 26px;border-radius:3px;text-decoration:none;font-size:13.5px;display:inline-block;transition:border-color .2s;margin-left:10px}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.6)}
+
+/* NUMBERS BAR */
+.numbers-bar{background:var(--navy-dark);padding:48px 5%;border-top:1px solid rgba(184,150,62,0.12);border-bottom:1px solid rgba(184,150,62,0.12)}
+.numbers-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+.num-item{text-align:center;padding:12px;border-right:1px solid rgba(255,255,255,0.06)}
+.num-item:last-child{border:none}
+.num-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:36px;font-weight:800;color:var(--gold);line-height:1;letter-spacing:-1px}
+.num-label{font-size:11px;color:var(--text-navy-muted);margin-top:4px;line-height:1.4}
+
+/* CTA SECTION */
+.cta-section{background:var(--navy);padding:80px 5%;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(184,150,62,0.07) 0%,transparent 70%)}
+.cta-inner{position:relative;z-index:1;max-width:520px;margin:0 auto}
+.cta-inner h2{font-size:40px;font-weight:800;color:var(--white);line-height:1.1;letter-spacing:-0.3px;margin-bottom:14px}
+.cta-inner h2 span{color:var(--gold)}
+.cta-inner p{font-size:14.5px;color:var(--text-navy-muted);line-height:1.8;margin-bottom:32px}
+
+/* FOOTER */
+footer{background:var(--navy-dark);border-top:1px solid rgba(184,150,62,0.12);padding:36px 5% 24px}
+.footer-inner{max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-brand{font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:var(--white)}
+.footer-brand span{color:var(--gold)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:12.5px;color:var(--text-navy-muted);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+.footer-copy{font-size:11.5px;color:rgba(136,153,187,0.35)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .numbers-grid{grid-template-columns:repeat(3,1fr)}
+  .num-item{border-bottom:1px solid rgba(255,255,255,0.06)}
+}
+@media(max-width:600px){
+  .numbers-grid{grid-template-columns:repeat(2,1fr)}
+  .cta-inner h2{font-size:28px}
+}
+
+#help-hero{background:var(--navy-dark);padding:90px 5% 70px;position:relative;overflow:hidden}
+#help-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(184,150,62,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(184,150,62,0.03) 1px,transparent 1px);background-size:60px 60px}
+.help-hero-inner{max-width:1080px;margin:0 auto;position:relative;z-index:1;max-width:680px}
+.help-h1{font-size:48px;font-weight:800;color:var(--white);line-height:1.1;letter-spacing:-0.5px;margin-bottom:18px}
+.help-h1 span{color:var(--gold)}
+.help-sub{font-size:15px;color:var(--text-navy-muted);line-height:1.85;margin-bottom:28px}
+
+#pain{background:var(--off-white);padding:80px 5%}
+.pain-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:40px}
+.pain-card{background:var(--white);padding:32px 28px;position:relative}
+.pain-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height .3s}
+.pain-card:hover::before{height:100%}
+.pain-num{font-size:10.5px;font-weight:700;letter-spacing:2px;color:var(--gold);margin-bottom:14px}
+.pain-quote{font-size:16px;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:10px;font-family:'Plus Jakarta Sans',sans-serif}
+.pain-desc{font-size:13px;color:var(--text-muted);line-height:1.7;margin-bottom:16px}
+.pain-answer{font-size:13px;color:var(--navy);border-left:2px solid var(--gold);padding-left:12px;line-height:1.6}
+
+#models{background:var(--white);padding:80px 5%}
+.models-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:40px}
+.model-card{background:var(--off-white);padding:26px 22px;border-top:3px solid transparent;transition:border-color .25s,background .25s}
+.model-card:hover{border-top-color:var(--gold);background:var(--white)}
+.model-type{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.model-card h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px;font-family:'Plus Jakarta Sans',sans-serif}
+.model-card p{font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px}
+.model-tag{font-size:11.5px;color:var(--text-muted);font-style:italic}
+.models-note{max-width:1080px;margin:16px auto 0;background:var(--off-white);border:1px solid var(--gray);border-radius:3px;padding:20px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.models-note strong{display:block;font-size:14.5px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.models-note p{font-size:13px;color:var(--text-muted)}
+
+#proof{background:var(--off-white);padding:80px 5%}
+.cases-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px;margin-bottom:28px}
+.case-card{background:var(--white);border:1px solid var(--gray);border-radius:3px;padding:22px 20px;transition:border-color .25s}
+.case-card:hover{border-color:var(--gold)}
+.case-sector{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.case-title{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:12px;line-height:1.35;font-family:'Plus Jakarta Sans',sans-serif}
+.case-outcome{font-size:12px;color:var(--navy);background:var(--gold-pale);padding:8px 12px;border-radius:2px;line-height:1.55}
+.case-outcome strong{color:var(--gold);font-weight:700}
+.products-strip{max-width:1080px;margin:0 auto;background:var(--white);border:1px solid var(--gray);border-radius:3px;padding:24px 28px}
+.ps-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:18px}
+.ps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.ps-item{padding:0 20px;border-right:1px solid var(--gray)}
+.ps-item:first-child{padding-left:0}
+.ps-item:last-child{border:none}
+.ps-company{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+.ps-name{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:3px;font-family:'Plus Jakarta Sans',sans-serif}
+.ps-detail{font-size:11.5px;color:var(--text-muted);line-height:1.5}
+
+@media(max-width:900px){
+  .help-h1{font-size:32px}
+  .pain-grid{grid-template-columns:1fr}
+  .models-grid{grid-template-columns:1fr 1fr}
+  .cases-grid{grid-template-columns:1fr 1fr}
+  .ps-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .ps-item{border:none;padding:0}
+}
+@media(max-width:600px){
+  .models-grid,.cases-grid{grid-template-columns:1fr}
+  .ps-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Jean-Luc <span>Fringeli</span></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="how-i-help.html" class="active">How I Help</a></li>
+<li><a href="https://outlook.office.com/bookwithme/user/81af3fe3b3a4403197aec0fa37684e41@mdsplus.com/meetingtype/HkvnOKtyhkGmxHfpz8cr6w2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" class="nav-cta">Book a Call</a></li></ul>
+    <div class="nav-hamburger" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="how-i-help.html">How I Help</a>
+<a href="https://outlook.office.com/bookwithme/user/81af3fe3b3a4403197aec0fa37684e41@mdsplus.com/meetingtype/HkvnOKtyhkGmxHfpz8cr6w2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank">Book a Call →</a>
+    </div>
+  </div>
+</nav>
+
+<section id="help-hero">
+  <div class="help-hero-inner">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span>How I Help</span></div>
+    <h1 class="help-h1">The execution partner for <span>hardware companies.</span></h1>
+    <p class="help-sub">I step in when companies need senior operational leadership — to execute, industrialize, and scale. Based in Switzerland, operating across Europe and Asia.</p>
+    <a href="https://outlook.office.com/bookwithme/user/81af3fe3b3a4403197aec0fa37684e41@mdsplus.com/meetingtype/HkvnOKtyhkGmxHfpz8cr6w2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" class="btn-gold">Book a 30-min Call</a>
+    <a href="#pain" class="btn-ghost">The problems I solve</a>
+  </div>
+</section>
+
+<section id="pain">
+  <div class="container">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span>The Problems I Solve</span></div>
+    <h2 class="section-title" style="margin-top:4px">If any of these sound familiar, we should talk.</h2>
+  </div>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <div class="pain-num">01 · First-Time Outsourcing</div>
+      <div class="pain-quote">"We have never outsourced a project — let alone to a team on another continent."</div>
+      <p class="pain-desc">No internal process, no reference points, no network. The risk feels unquantifiable.</p>
+      <div class="pain-answer">I make outsourcing structured and transparent — with clear milestones, contracts, and governance that let you stay in control from Europe.</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-num">02 · Asia Is Difficult</div>
+      <div class="pain-quote">"We tried Asia before. It did not go well."</div>
+      <p class="pain-desc">Wrong supplier, quality failure, missed delivery. Once burned, the instinct is to avoid it entirely — even when the economics demand it.</p>
+      <div class="pain-answer">I know which manufacturers to trust and which to avoid. My network is built on 15+ years of on-the-ground relationships, not directories.</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-num">03 · No Engineering Team</div>
+      <div class="pain-quote">"We don't have an engineering team — but our business depends on delivering a product."</div>
+      <p class="pain-desc">The commercial opportunity is real. The technical capability is not there. Hiring takes too long and the risk of a wrong hire is too high.</p>
+      <div class="pain-answer">I bring both the engineering leadership and the Asian manufacturing network to deliver the product — without requiring you to build a team first.</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-num">04 · Cost Reduction Strategy</div>
+      <div class="pain-quote">"We need to reduce costs through outsourcing — but have no idea how to structure it."</div>
+      <p class="pain-desc">Margins are under pressure. The board wants action. But what to outsource, to whom, and in what sequence is unclear.</p>
+      <div class="pain-answer">I diagnose where cost is actually created, build the outsourcing strategy around that, and execute it with clear owners and milestones.</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-num">05 · IP & Confidentiality</div>
+      <div class="pain-quote">"We want to outsource R&D — but cannot afford to lose control of our IP."</div>
+      <p class="pain-desc">Especially critical in medtech and defense. The fear of IP leakage to Asian manufacturers is legitimate and often prevents companies from acting at all.</p>
+      <div class="pain-answer">I structure outsourcing engagements with IP segregation, NDA frameworks, and contractual protections that have been validated across regulated industries.</div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-num">06 · No Single Owner</div>
+      <div class="pain-quote">"Everyone is involved — but no one owns the result."</div>
+      <p class="pain-desc">Projects span R&D, quality, supply chain, and manufacturing. Each team does its part. But there is no single accountable person driving the outcome.</p>
+      <div class="pain-answer">I own the outcome end to end — one accountable person from kickoff to delivery, regardless of how many teams are involved.</div>
+    </div>
+  </div>
+</section>
+
+<div class="numbers-bar">
+  <div class="numbers-grid">
+    <div class="num-item"><div class="num-val">25+</div><div class="num-label">Years in hardware operations</div></div>
+    <div class="num-item"><div class="num-val">$100M+</div><div class="num-label">Project budgets managed</div></div>
+    <div class="num-item"><div class="num-val">40+</div><div class="num-label">Asian suppliers qualified</div></div>
+    <div class="num-item"><div class="num-val">8×</div><div class="num-label">Revenue growth at MDS+</div></div>
+    <div class="num-item"><div class="num-val">3</div><div class="num-label">Hardware ventures founded</div></div>
+  </div>
+</div>
+
+<section id="models">
+  <div class="container">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span>Engagement Models</span></div>
+    <h2 class="section-title" style="margin-top:4px">How we work together.</h2>
+  </div>
+  <div class="models-grid">
+    <div class="model-card">
+      <div class="model-type">Model 01</div>
+      <h3>Fractional COO / CPO</h3>
+      <p>Embedded part-time operational leadership, 2–3 days per week. Direct accountability for outcomes.</p>
+      <div class="model-tag">6–18 month engagements</div>
+    </div>
+    <div class="model-card">
+      <div class="model-type">Model 02</div>
+      <h3>Project Lead</h3>
+      <p>End-to-end ownership of a defined project — supply chain setup, certification, team buildout — with clear deliverables and timeline.</p>
+      <div class="model-tag">4–12 month projects</div>
+    </div>
+    <div class="model-card">
+      <div class="model-type">Model 03</div>
+      <h3>Strategic Advisory</h3>
+      <p>Structured guidance and network access. Useful for a second opinion, a supplier introduction, or early-stage direction-setting.</p>
+      <div class="model-tag">Monthly retainer or hourly</div>
+    </div>
+    <div class="model-card">
+      <div class="model-type">Model 04</div>
+      <h3>Venture Co-Founder</h3>
+      <p>For the right hardware opportunity — equity-based, full operational commitment, network of investors and manufacturers.</p>
+      <div class="model-tag">Selective — 1 per year</div>
+    </div>
+  </div>
+  <div class="models-note">
+    <div><strong>Not sure which model fits?</strong><p>Book a 30-minute call. I will tell you directly whether I am the right fit — and if not, who might be.</p></div>
+    <a href="https://outlook.office.com/bookwithme/user/81af3fe3b3a4403197aec0fa37684e41@mdsplus.com/meetingtype/HkvnOKtyhkGmxHfpz8cr6w2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" class="btn-gold" style="white-space:nowrap">Book a Call</a>
+  </div>
+</section>
+
+<section id="proof">
+  <div class="container">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span>Selected Engagements</span></div>
+    <h2 class="section-title" style="margin-top:4px">Real work. Most of it under NDA.</h2>
+    <p style="font-size:14px;color:var(--text-muted);margin-top:10px">Anonymized where required. Outcomes are accurate. Full details available in a conversation.</p>
+  </div>
+  <div class="cases-grid">
+    <div class="case-card">
+      <div class="case-sector">Medtech · Europe → Singapore</div>
+      <div class="case-title">R&D team built from zero for a European medical device company entering Asia</div>
+      <div class="case-outcome"><strong>Result:</strong> 8-person team operational in 5 months. ISO 13485 extended. European HQ managing remotely within 6 months.</div>
+    </div>
+    <div class="case-card">
+      <div class="case-sector">Consumer Electronics · Switzerland → Malaysia</div>
+      <div class="case-title">Full supply chain setup for a Swiss IoT hardware company moving production to Asia</div>
+      <div class="case-outcome"><strong>Result:</strong> Production qualified in 7 months. COGS down 34%. Lead time cut from 14 to 5 weeks.</div>
+    </div>
+    <div class="case-card">
+      <div class="case-sector">Medtech · Germany → Asia</div>
+      <div class="case-title">ISO 13485 QMS deployed across two Asian contract manufacturers</div>
+      <div class="case-outcome"><strong>Result:</strong> Both sites certified in 11 months. Product launched in EU and APAC on schedule.</div>
+    </div>
+    <div class="case-card">
+      <div class="case-sector">Robotics · Switzerland → Singapore</div>
+      <div class="case-title">Manufacturing transfer for a Swiss robotics company moving to Southeast Asia</div>
+      <div class="case-outcome"><strong>Result:</strong> Transfer in 8 months. 40% cost reduction. Zero field failures in year one.</div>
+    </div>
+    <div class="case-card">
+      <div class="case-sector">Consumer Hardware · France → China</div>
+      <div class="case-title">Full industrialization for a French hardware startup post-crowdfunding</div>
+      <div class="case-outcome"><strong>Result:</strong> Mass production in 9 months. 18,000 units shipped on time. Zero critical quality issues.</div>
+    </div>
+    <div class="case-card">
+      <div class="case-sector">Industrial · Belgium → Malaysia & China</div>
+      <div class="case-title">Dual-source supply chain for a Belgian industrial electronics company</div>
+      <div class="case-outcome"><strong>Result:</strong> Dual-source operational in 8 months. Lead time from 20 to 6 weeks.</div>
+    </div>
+  </div>
+  <div class="products-strip">
+    <div class="ps-label">Products I have personally built and commercialized</div>
+    <div class="ps-grid">
+      <div class="ps-item"><div class="ps-company">PMI · 2014–2019</div><div class="ps-name">IQOS</div><div class="ps-detail">$17B ARR · 50M devices/yr · 40+ suppliers</div></div>
+      <div class="ps-item"><div class="ps-company">Gill Lab · 2020</div><div class="ps-name">Gill Face Mask</div><div class="ps-detail">S$1.5M · 20+ countries · ISO 13485 in 60 days</div></div>
+      <div class="ps-item"><div class="ps-company">InnoCity Lab · 2025</div><div class="ps-name">Nomade Pavilion</div><div class="ps-detail">Solar infrastructure · Masdar City & Singapore</div></div>
+      <div class="ps-item"><div class="ps-company">MDS Safetech · 2022</div><div class="ps-name">Industrial Safety Devices</div><div class="ps-detail">Worker safety · Asia & Middle East</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Tell me what you are <span>trying to execute.</span></h2>
+    <p>30 minutes. No pitch, no deck. I will tell you directly whether I can help.</p>
+    <a href="https://outlook.office.com/bookwithme/user/81af3fe3b3a4403197aec0fa37684e41@mdsplus.com/meetingtype/HkvnOKtyhkGmxHfpz8cr6w2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" class="btn-gold">Book a Call</a>
+    <a href="https://www.linkedin.com/in/fringeli/" target="_blank" class="btn-ghost">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Jean-Luc <span>Fringeli</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="how-i-help.html">How I Help</a>
+      <a href="https://www.linkedin.com/in/fringeli/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-copy">© 2026 jlfringeli.com</div>
+  </div>
+</footer>
+</body>
+</html>
